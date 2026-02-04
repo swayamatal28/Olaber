@@ -9,10 +9,10 @@ import UserProtectWrapper from './pages/userProtectWrapper'
 import UserLogout from './pages/UserLogout'
 import Home from './pages/Home'
 import CaptainHome from './pages/CaptainHome'
-// import CaptainLogout from './pages/CaptainLogout'
+import CaptainLogout from './pages/CaptainLogout'
 import CaptainProtectWrapper from './pages/CaptainProtectWrapper'
-// import Riding from './pages/Riding'
-// import CaptainRiding from './pages/CaptainRiding'
+import Riding from './pages/Riding'
+import CaptainRiding from './pages/CaptainRiding'
 
 const App = () => {
   return (
@@ -20,10 +20,9 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Start />} />
         <Route path='/login' element={<UserLogin />} />
-        {/* <Route path='/riding' element={<Riding />} /> */}
-        {/* <Route path='/captain-riding' element={<CaptainRiding />} /> */}
+        <Route path='/riding' element={<Riding />} />
+        <Route path='/captain-riding' element={<CaptainRiding />} />
         <Route path='/home' element={
-
           <UserProtectWrapper>
             <Home />
           </UserProtectWrapper>
@@ -33,7 +32,7 @@ const App = () => {
         <Route path='/captain-signup' element={<Captainsignup />} />
         <Route path='/users/logout' element={<UserProtectWrapper><UserLogout /></UserProtectWrapper>} />
         <Route path='/captain-home' element={<CaptainProtectWrapper><CaptainHome /></CaptainProtectWrapper>}></Route>
-        {/* <Route path='/captain/logout' element={<CaptainProtectWrapper><CaptainLogout /></CaptainProtectWrapper>}></Route> */}
+        <Route path='/captain/logout' element={<CaptainProtectWrapper><CaptainLogout /></CaptainProtectWrapper>}></Route>
       </Routes>
     </div>
   )

@@ -1,16 +1,58 @@
-# React + Vite
+# Olaber Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Olaber ride-sharing platform built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+For complete project documentation, please see the main [README.md](../README.md) in the root directory.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Quick Start
 
-## React Compiler
+1. Install dependencies:
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Create `.env` file:
+```env
+VITE_BASE_URL=http://localhost:4000
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+```
 
-## Expanding the ESLint configuration
+3. Start the development server:
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The app will be available at `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Tech Stack
+
+- **React 19** - UI Library
+- **Vite** - Build Tool
+- **Tailwind CSS** - Styling
+- **React Router DOM** - Routing
+- **React-Leaflet** - Map Integration (OpenStreetMap - FREE)
+- **Socket.IO Client** - Real-time Communication
+- **Axios** - HTTP Client
+- **GSAP** - Animations
+- **Remix Icon** - Icons
+
+## Features
+
+- User authentication (Login/Register)
+- Captain authentication (Login/Register)
+- Live location tracking with OpenStreetMap
+- Ride booking with fare estimation
+- Real-time ride updates via WebSocket
+- Vehicle selection (Car, Motorcycle, Auto)
+- OTP verification for ride start
+
+## Note on Maps
+
+This application uses **React-Leaflet with OpenStreetMap** for live tracking, which is completely free and requires no API key. The map will work out of the box!
